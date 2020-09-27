@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1601195711 source:d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"SelectionSort.h"
+	"BubbleSort.h"
+	"MergeSort.h"
+
+1600181877 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\bubblesort.h
+
+1600158558 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\selectionsort.h
+
+1601195359 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\mergesort.h
+
