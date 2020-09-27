@@ -81,9 +81,17 @@ int main() {
   }
   printf("]");
 
-  printf("\n");
+  // Ket qua Insertion sort
   mergeSort(mergeArray, 0, size - 1, size);
-
+  printf("\nMang da thuc hien merge Sort: [");
+  for (int i = 0; i < size; i++) {
+    if (i == size - 1) {
+      printf("%d", mergeArray[i]);
+    } else {
+      printf("%d, ", mergeArray[i]);
+    }
+  }
+  printf("]");
 
   return 0;
 }

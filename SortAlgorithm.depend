@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1601203126 source:d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\main.c
+1601215162 source:d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
@@ -12,7 +12,7 @@
 
 1601199694 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\selectionsort.h
 
-1601207265 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\mergesort.h
+1601221351 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\mergesort.h
 
 1601200567 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\insertionsort.h
 
