@@ -5,38 +5,40 @@
 
 void mergeSort(int *array, int startIndex, int endIndex, int size) {
 
-    if (size <=1) return array;
+//    printf("^^^^^^^^^^^^^\n");
+//    printf("init array: start - %d, end - %d, size - %d\n", startIndex, endIndex, size);
+    if (size <= 1) return;
 
-    const int leftArrayLen = size/2;
-    const int rightArrayLen = size - leftArrayLen;
-    int leftArray[leftArrayLen];
-    int rightArray[rightArrayLen];
-    int leftMerge[leftArrayLen];
-    int rightMerge[rightArrayLen];
+    int leftArrayLen = size/2;
+    int rightArrayLen = size - leftArrayLen;
+    int leftArrStart, leftArrEnd;
+    int rightArrStart, rightArrEnd;
 
-    for (int i = 0; i < leftArrayLen; i++) {
-        leftArray[i] = array[i];
+    leftArrStart = startIndex;
+    leftArrEnd = startIndex + leftArrayLen - 1;
+    rightArrStart = leftArrEnd + 1;
+    rightArrEnd = endIndex;
+
+    printf("left array: start - %d, end - %d, size - %d\n", leftArrStart, leftArrEnd, leftArrayLen);
+    for (int i = leftArrStart; i <= leftArrEnd; i++) {
+        printf("%d", array[i]);
     }
 
-    for (int i = leftArrayLen; i < size; i++) {
-        rightArray[i] = array[i];
+    printf("^^^^^^^^^^^^^\n");
+
+    printf("right array: start - %d, end - %d, size - %d\n", rightArrStart, rightArrEnd, rightArrayLen);
+    for (int i = rightArrStart; i <= rightArrEnd; i++) {
+        printf("%d", array[i]);
     }
 
-    int mergl[5] = mergeSort(leftArray, leftArrayLen);
-    for (int i = 0; i < leftArrayLen; i++) {
-        leftMerge[i] = mergl[i];
-    }
+    printf("^^^^^^^^^^^^^\n");
 
-    int rightMerge[rightArrayLen] = mergeSort(rightArray, rightArrayLen);
+    mergeSort(array, rightArrStart, rightArrEnd, rightArrayLen);
 
-    int *mergeArray[size];
-    for (int i = 0; i < leftArrayLen; i++) {
-        mergeArray[i] = leftMerge[i];
-    }
-    for (int i = leftArrayLen; i < rightArrayLen; i++) {
-        mergeArray[i] = rightArray[i];
-    }
-    return mergeArray;
+    mergeSort(array, leftArrStart, leftArrEnd, leftArrayLen);
+
+    // merge
+
 }
 
 #endif // MERGESORT_H_INCLUDED

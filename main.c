@@ -4,6 +4,7 @@
 #include "SelectionSort.h"
 #include "BubbleSort.h"
 #include "InsertionSort.h"
+#include "MergeSort.h"
 
 int main() {
 
@@ -79,6 +80,9 @@ int main() {
     }
   }
   printf("]");
+
+  printf("\n");
+  mergeSort(mergeArray, 0, size - 1, size);
 
 
   return 0;
