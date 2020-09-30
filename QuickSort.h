@@ -1,40 +1,44 @@
 #ifndef QUICKSORT_H_INCLUDED
 #define QUICKSORT_H_INCLUDED
 
-void quickSort(int *array, int startIndex, int endIndex, int size) {
-  if (size <= 1) return;
+void quickSort(int *array, int startIndex, int endIndex) {
 
-  int leftArrayLen = size/2;
-  int rightArrayLen = size - leftArrayLen;
-  int leftArrStart, leftArrEnd;
-  int rightArrStart, rightArrEnd;
+  if (startIndex >= endIndex) return;
+
+  int leftArrStart;
+  int rightArrEnd;
 
   leftArrStart = startIndex;
-  leftArrEnd = startIndex + leftArrayLen - 1;
-  rightArrStart = leftArrEnd + 1;
   rightArrEnd = endIndex;
 
   int p = array[endIndex];
   int j = endIndex - 1;
   int i = startIndex;
   while (i <= j) {
-      if (array[i] > p && array[j] < p) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-        i++;
-        j--;
-      }
+    if (array[i] >= p && array[j] <= p) {
+      int temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+      i++;
+      j--;
+    } else if (array[i] <= p && array[j] >= p) {
+      i++;
+      j--;
+    } else if (array[i] >= p && array[j] > p) {
+      j--;
+    } else if (array[i] < p && array[j] <= p) {
+      i++;
+    }
   }
 
-  int temp = array[i + 1];
-  array[i + 1] = p;
+  int temp = array[i];
+  array[i] = p;
   array[endIndex] = temp;
 
-  if (startIndex <= endIndex) {
-    quickSort(array, rightArrStart, i + 2, rightArrayLen);
-    quickSort(array, leftArrStart, i, leftArrayLen);
-  }
+  // sau khi doi cho giua array[i] va pivot, thi giu lai vi tri [i],
+  // tien hanh sort tiep cho 2 mang left va right
+  quickSort(array, leftArrStart, i - 1);
+  quickSort(array, i + 1, rightArrEnd);
 }
 
 #endif // QUICKSORT_H_INCLUDED
