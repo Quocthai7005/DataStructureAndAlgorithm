@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1601392600 source:d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\main.c
+1601477906 source:d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
@@ -8,6 +8,7 @@
 	"InsertionSort.h"
 	"MergeSort.h"
 	"QuickSort.h"
+	"InterchangeSort.h"
 
 1601199931 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\bubblesort.h
 
@@ -17,5 +18,7 @@
 
 1601308833 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\insertionsort.h
 
-1601476964 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\quicksort.h
+1601477280 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\quicksort.h
+
+1601478216 d:\cat\uit\cau_truc_du_lieu\bai_tap\sortalgorithm\interchangesort.h
 
